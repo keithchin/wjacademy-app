@@ -1,9 +1,5 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import CoachesList from "./components/coaches/coach-list.component";
-import EditCoach from "./components/coaches/edit-coach.component";
-import CreateCoach from "./components/coaches/create-coach.component";
-import WJLogo from "./assets/images/wj-logo-transparent.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,29 +8,37 @@ function App() {
     <Router>
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link className="navbar-brand" to="/">
-            <img src={WJLogo} width="30" height="30" alt="WJGolfAcademy" />
-          </Link>
+          <a
+            class="navbar-brand"
+            href="https://codingthesmartway.com"
+            target="_blank"
+          >
+            <img
+              src={logo}
+              width="30"
+              height="30"
+              alt="CodingTheSmartWay.com"
+            />
+          </a>
           <Link to="/" className="navbar-brand">
-            WJGolfAcademy App
+            MERN-Stack Todo App
           </Link>
           <div className="collpase navbar-collapse">
             <ul className="navbar-nav mr-auto">
               <li className="navbar-item">
                 <Link to="/" className="nav-link">
-                  Coaches
+                  Todos
                 </Link>
               </li>
               <li className="navbar-item">
-                <Link to="/create-coach" className="nav-link">
-                  Create Coach
+                <Link to="/create" className="nav-link">
+                  Create Todo
                 </Link>
               </li>
             </ul>
           </div>
         </nav>
-        <br />
-
+        <h2>WJGolfAcademy App</h2>
         <Route path="/" exact component={CoachesList} />
         <Route path="/create-coach" component={CreateCoach} />
         <Route path="/edit/:id" component={EditCoach} />

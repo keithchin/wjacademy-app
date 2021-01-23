@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CoachesList from "./components/coaches/coach-list.component";
 import EditCoach from "./components/coaches/edit-coach.component";
 import CreateCoach from "./components/coaches/create-coach.component";
-import WJLogo from "./assets/images/wj-logo-transparent.png";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -12,9 +11,6 @@ function App() {
     <Router>
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Link className="navbar-brand" to="/">
-            <img src={WJLogo} width="30" height="30" alt="WJGolfAcademy" />
-          </Link>
           <Link to="/" className="navbar-brand">
             WJGolfAcademy App
           </Link>
